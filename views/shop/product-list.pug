@@ -12,12 +12,14 @@ block content
                         header.card__header
                             h1.product__titleGreat #{product.title}
                         .card__image
-                        img(src="#{product.imageUrl}" width = "300px" alt="#{product.title}")
+                        img(src=product.imageUrl width = "300px" alt=product.title)
                         .card__content
                             h2.product__price $#{product.price}
                             p.product__description #{product.description}
                         .card__actions
-                        button.btnAdd to Cart
+                            form(action="/add-to-cart", method="POST")
+                                button.btn Add to cart 
+                        
         else 
             h1 There are no products!
 
