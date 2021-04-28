@@ -17,8 +17,11 @@ block content
                             h2.product__price $#{product.price}
                             p.product__description #{product.description}
                         .card__actions
-                            form(action="/add-to-cart", method="POST")
+                            -var url =  product.id
+                            a(href="/products/" + url).btn Details 
+                            form(action="/cart", method="POST")
                                 button.btn Add to cart 
+                                input(type= 'hidden', name= "productId", value = product.id)
                         
         else 
             h1 There are no products!
