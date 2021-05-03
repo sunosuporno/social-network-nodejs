@@ -20,7 +20,7 @@ block content
                 .form-control
                     label(for="description") Description
                     textarea(name="description", rows="5" )#description #{product.description}
-                input(type="hidden" value = product.id name="productId")
+                input(type="hidden" value = product._id name="productId")
                 button.btn(type="submit") Update Product
         else 
             form.product-form(action="/admin/add-product" method="POST")
