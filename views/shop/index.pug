@@ -19,6 +19,7 @@ block content
                         .card__actions
                             if isAuthenticated
                                 form(action="/cart", method="post")
+                                    input(type="hidden", value = csrfToken, name = "_csrf")
                                     button(type="submit").btn Add to Cart 
                                     input(type= 'hidden', name= "productId", value = product._id)
 
