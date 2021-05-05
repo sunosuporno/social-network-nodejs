@@ -19,9 +19,10 @@ block content
                         .card__actions
                             -var url =  product._id
                             a(href="/products/" + url).btn Details 
-                            form(action="/cart", method="POST")
-                                button.btn Add to cart 
-                                input(type= 'hidden', name= "productId", value = product._id)
+                            if isAuthenticated
+                                form(action="/cart", method="POST")
+                                    button.btn Add to cart 
+                                    input(type= 'hidden', name= "productId", value = product._id)
                         
         else 
             h1 There are no products!

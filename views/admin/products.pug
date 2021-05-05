@@ -18,7 +18,7 @@ block content
                             p.product__description #{product.description}
                         .card__actions
                         -var url = product._id
-                        a(href="/admin/edit-product/" + url + "?edit=true")  Edit
+                        a(href="/admin/edit-product/" + url + "?edit=true").btn  Edit
                         form(action="/admin/delete-product", method="POST") 
                             input(type="hidden", value = product._id name="productId")
                             button(type="submit").btn Delete 
