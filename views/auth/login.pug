@@ -10,13 +10,17 @@ block content
             div.user-message.user-message--error #{errorMessage}
         form.login-form(action="/login" method="POST")
             .form-control
-                label(for="email") E-Mail 
-                input(type="email" name="email")#email
+                label(for="email") E-Mail
+                - var url = validationErrors.find(e => e.param === 'email') 
+                input(class = url ? 'invalid' : '', type="email" name="email", value= oldInput.email)#email
             .form-control
                 label(for="password") Password
-                input(type="password", name="password" )#password
+                - var url = validationErrors.find(e => e.param === 'password')
+                input(class = url ? 'invalid' : '', type="password", name="password", value = oldInput.password )#password
                 input(type="hidden", value = csrfToken, name = "_csrf")
             button.btn(type="submit") Login
+        .centered 
+            a(href="/reset") Reset Password
 
                                                        
 
