@@ -11,7 +11,10 @@ block content
             ul.orders 
                 each order in orders
                     li.orders_item
-                        h1 Order - ##{order._id}
+                        -var url = order._id
+                        h1 Order - ##{order._id} 
+                            a(href="/orders/" + url)  Invoice
                         ul.orders__products
                             each p in order.products
-                                li.orders__products-item #{p.product.title} (#{p.quantity})
+                                li.orders__products-item #{p.product.title} (#{p.quantity}) 
+                                    
