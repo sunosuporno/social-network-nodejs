@@ -2,10 +2,12 @@ const fs = require("fs");
 const path = require("path");
 const PDFDocument = require("pdfkit");
 const Product = require("../models/product");
+require('dotenv').config()
 const Order = require("../models/order");
 const { equal } = require("assert");
+const STRIPE_API_KEY = process.env.STRIPE_API_KEY
 const stripe = require("stripe")(
-  "sk_test_51Iqv57SDn5dqFBjLsCjP1qg5pslfJqKZdM4ALqFmoCGJyUzcXJNhIKtxjne56GcP7k4hAjsIPczIEDPUJQFRwZZh00GZeZXOR8"
+  STRIPE_API_KEY
 );
 const ITEMS_PER_PAGE = 1;
 
