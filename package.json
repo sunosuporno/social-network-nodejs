@@ -1,43 +1,27 @@
 {
-  "name": "my-app",
+  "name": "rest",
   "version": "1.0.0",
+  "description": "Learning REST APIs",
   "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "nodemon app.js"
   },
-  "author": "Suporno Sarkar",
-  "license": "ISC",
-  "dependencies": {
-    "bcryptjs": "^2.4.3",
-    "body-parser": "^1.19.0",
-    "connect-flash": "^0.1.1",
-    "connect-mongodb-session": "^2.4.1",
-    "csurf": "^1.11.0",
-    "dotenv": "^9.0.1",
-    "express": "^4.17.1",
-    "express-session": "^1.17.1",
-    "express-validator": "^6.11.0",
-    "mongodb": "^3.6.6",
-    "mongoose": "^5.12.7",
-    "multer": "^1.4.2",
-    "nodemailer": "^6.6.0",
-    "nodemailer-sendgrid-transport": "^0.2.0",
-    "pdfkit": "^0.12.1",
-    "pug": "^3.0.2",
-    "stripe": "^8.148.0",
-    "uuid": "^3.4.0"
-  },
-  "devDependencies": {
-    "nodemon": "^2.0.7"
-  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/sunosuporno/book-shop.git"
   },
+  "author": "Suporno Sarkar",
+  "license": "ISC",
   "bugs": {
     "url": "https://github.com/sunosuporno/book-shop/issues"
   },
   "homepage": "https://github.com/sunosuporno/book-shop#readme",
-  "description": ""
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "express": "^4.17.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.7"
+  }
 }
